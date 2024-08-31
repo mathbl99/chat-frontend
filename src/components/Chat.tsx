@@ -6,7 +6,7 @@ import { createConnection } from '../services/createConnection';
 import { useAuth } from '../hooks/useAuth';
 import { ChatProps, MessageProps } from '../types';
 
-import './styles/Chat.css'
+import './styles/Chat.css';
 
 export default function Chat({ user }: ChatProps) {
   const [messages, setMessages] = useState<MessageProps[]>([]);
@@ -17,7 +17,7 @@ export default function Chat({ user }: ChatProps) {
   const socket = useRef<Socket | null>(null);
 
   useEffect(() => {
-    socket.current = createConnection("http://localhost:3000/chat", token);
+    socket.current = createConnection("https://chat-backend-lime.vercel.app/chat", token);
 
     const handleMessage = (message: MessageProps) => {
       if (message.author_id !== user.id) {

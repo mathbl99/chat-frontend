@@ -12,7 +12,7 @@ type Token = {
 const authenticateUser = async (query: UserQuery): Promise<AxiosResponse<Token>> => {
   const { email, password } = query;
 
-  const response = await axios.post("http://localhost:3000/login", 
+  const response = await axios.post("https://chat-backend-lime.vercel.app/login", 
     {
       email,
       password,
