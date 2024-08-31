@@ -1,0 +1,35 @@
+.form {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.form input[type="text"], input[type="password"] {
+  padding: 0.8rem;
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  text-decoration: none;
+  outline: none;
+  border: 0.1px solid #d3d3d3;
+  border-radius: 0.3rem;
+}
+
+.form button {
+  height: 3.4rem;
+  margin-top: 1.2rem;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 0.2rem;
+  background-color: #6e88c0;
+  color: white;
+}
+
+.form input[type="text"]:focus, input[type="password"]:focus {
+  border: 0.1rem solid #83aeff;
+}
+
+.form button:hover {
+  background-color: #4C6BAF;
+}

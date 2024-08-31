@@ -1,0 +1,26 @@
+.signin {
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.signin div {
+  height: 2rem;
+}
+
+.signin .login-message {
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  background: #ffd5d5;
+  color: #500101;
+  font-size: 1.4rem;
+}
+
+.signin p {
+  font-size: 1.4rem;
+}
+
+.signin p a {
+  text-decoration: none;
+}

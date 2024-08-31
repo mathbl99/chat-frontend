@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* width: 100vw;
+  height: 100vh; */
+  background-color: rgb(44, 44, 44);
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
