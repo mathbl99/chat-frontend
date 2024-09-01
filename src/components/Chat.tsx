@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from 'react';
 import Message from './Message';
 import { Socket } from 'socket.io-client';
+import apiUrl from './../helpers/apiUrl';
 import { createMessage } from './../services/createMessage';
 import { createConnection } from '../services/createConnection';
 import { useAuth } from '../hooks/useAuth';
@@ -17,7 +18,7 @@ export default function Chat({ user }: ChatProps) {
   const socket = useRef<Socket | null>(null);
 
   useEffect(() => {
-    socket.current = createConnection("https://chat-backend-lime.vercel.app/chat", token);
+    socket.current = createConnection(apiUrl + "/chat", token);
 
     const handleMessage = (message: MessageProps) => {
       if (message.author_id !== user.id) {

@@ -1,4 +1,5 @@
 import axios, { AxiosResponse } from "axios";
+import apiUrl from "../helpers/apiUrl";
 
 type UserQuery = {
   email: string,
@@ -12,7 +13,7 @@ type Token = {
 const authenticateUser = async (query: UserQuery): Promise<AxiosResponse<Token>> => {
   const { email, password } = query;
 
-  const response = await axios.post("https://chat-backend-lime.vercel.app/login", 
+  const response = await axios.post(apiUrl + "/login", 
     {
       email,
       password,
